@@ -1,7 +1,8 @@
-import sys
+def spam(eggs):
+    print('1: ' + eggs)
+    eggs = 'spam local'
+    print('2: ' + eggs)
 
-while True:
-    response = input('Type exit to exit. ')
-    if response == 'exit':
-        sys.exit()
-    print('You typed ' + response + '.')
+eggs = 'global'
+
+spam(eggs)
