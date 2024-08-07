@@ -1,8 +1,5 @@
-def spam(eggs):
-    print('1: ' + eggs)
-    eggs = 'spam local'
-    print('2: ' + eggs)
+spam = ['cat', 'dog', 'bat']
 
-eggs = 'global'
+spam.insert(1, 'chicken')
 
-spam(eggs)
+print(spam)
