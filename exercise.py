@@ -1,5 +1,4 @@
-spam = ['cat', 'dog', 'bat']
+tp = (42,)
 
-spam.insert(1, 'chicken')
-
-print(spam)
+for i in range(len(tp)): 
+    print(tp[i])
