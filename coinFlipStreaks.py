@@ -9,7 +9,7 @@
 
 import random
 numberOfStreaks = 0
-experimentLength = 10000
+experimentLength = 3
 headStreak = ['H', 'H', 'H', 'H', 'H', 'H']
 tailStreak = ['T', 'T', 'T', 'T', 'T', 'T']
 
@@ -19,14 +19,14 @@ for experimentNumber in range(experimentLength):
     for i in range(100):
         coinFlipList.append(random.choice(['H', 'T']))
  # Code that checks if there is a streak of 6 heads or tails in a row.
-    print('from this list: %s' % (coinFlipList))
+    # print('from this list: %s' % (coinFlipList))
 
     for x in range(len(coinFlipList)-5):
-        # print(coinFlipList[x:x+6], end=': ' )
-        # print(coinFlipList[x:x+6] == headStreak or coinFlipList[x:x+6] == tailStreak  )
+        print(coinFlipList[x:x+6], end=': ' )
+        print(coinFlipList[x:x+6] == headStreak or coinFlipList[x:x+6] == tailStreak  )
         if coinFlipList[x:x+6] == headStreak or coinFlipList[x:x+6] == tailStreak:
             numberOfStreaks += 1
-
+    print('')
 
      
 totalAttempts = experimentLength *  100
