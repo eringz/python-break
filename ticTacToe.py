@@ -15,18 +15,16 @@ def printBoard(board):
     print('-+-+-')
     print('%s|%s|%s' % (board['low-L'], board['low-M'], board['low-R']))
 
-printBoard(theBoard)
-turn = 'X'
 
+printBoard(theBoard)
+
+turn = 'X'
 for i in range(9):
-    move = input('Turn for %s. Move on which space?: ' % turn )
+    move = input('Make a move?: ')
     theBoard[move] = turn
     printBoard(theBoard)
-
     if turn == 'X':
         turn = '0'
     else:
         turn = 'X'
-
-
 
