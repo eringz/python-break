@@ -1,27 +1,18 @@
-# birthdays = {'Alice': 'Apr 1', 'Bob': 'Dec 12', 'Carol': 'Mar 4'}
+allGuests = {
+    'Alice': {'apples': 5, 'pretzels': 12},
+    'Bob': {'ham sandwiches': 3, 'apples': 2},
+    'Carol': {'cups': 3, 'apple pies': 1}
+}
 
-# while True:
-#     name = input('Enter a name: (blank to quit) ')
-#     if name == '':
-#         break
-#     if name in birthdays:
-#         print('%s is the birthday of %s' % (birthdays[name], name))
-#     else:
-#         print('I do not have birthday information for %s' % name)
-#         bday = input('What is their birthday?: ')
-#         birthdays[name] = bday
-#         print('Birthday information added.')
+def totalBrought(guests, item):
+    numBrought = 0
+    for k, v in guests.items():
+        numBrought = numBrought + v.get(item, 0)
+    return numBrought
 
-import pprint
-message = 'It was a bright cold day in April, and the clocks were striking thirteen.'
-
-count = {}
-
-for c in message:
-    count.setdefault(c, 0)
-    count[c] = count[c] + 1
-
-pprint.pprint(count)
-print(pprint.pformat(count))
-
-
+print('Number of things beign brought:')
+print('- Apples                 %s' % totalBrought(allGuests, 'apples'))
+print('- Cups                   %s' % totalBrought(allGuests, 'cups'))
+print('- Cakes                  %s' % totalBrought(allGuests, 'cakes'))
+print('- Ham Sandwiches         %s' % totalBrought(allGuests, 'ham sandwiches'))
+print('- Apple Pies             %s' % totalBrought(allGuests, 'apple pies'))
