@@ -27,4 +27,24 @@ def displayInventory(inventory):
         print('%s  %s' % (v, k))
         item_total += v
     print("Total number of items: " + str(item_total))
-displayInventory(stuff)
+# displayInventory(stuff)
+
+
+def addToInventory(inventory, addedItems):
+    # your code goes here
+    item = ''
+    for i in range(len(addedItems)):
+        item = addedItems[i]
+        if item in inventory.keys():
+            inventory[item] += 1
+        else:
+            inventory[item] = 1
+            
+                 
+            
+    return inventory
+
+inv = {'gold coin': 42, 'rope': 1}
+dragonLoot = ['gold coin', 'dagger', 'gold coin', 'gold coin', 'ruby']
+inv = addToInventory(inv, dragonLoot)
+displayInventory(inv)
