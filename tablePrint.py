@@ -20,16 +20,34 @@ tableData = [
             ]
 
 # Find longest characters in 
+# colWidth = []
+# temp = []
+# for i in range(len(tableData)):
+#     print('Table %s' % (i+1))
+#     maxLength = 0
+#     for j in range(len(tableData[i])):
+#         characterLong = len(tableData[i][j])
+#         if maxLength < characterLong:
+#             maxLength = characterLong             
+#     print('max length: %s' % maxLength)
+#     colWidth.append(maxLength)
 
-for i in range(len(tableData)):
-    print('Table %s' % (i+1))
-    maxLength = 0
-    for j in range(len(tableData[i])):
-        # print(tableData[i][j])
-        characterLong = len(tableData[i][j])
-        if maxLength < characterLong:
-            maxLength = characterLong 
-            
-    print('max length: %s' % maxLength)
-    
+def printTable(table):
+    colWidths = [0] * len(table)
+    # print(colWidth)
+    lengthOfLists = len(table[0])
+    # print(lengthOfLists)
+    for tableLen in range(len(table)):
+        sortedTable = sorted(table[tableLen], key=len)
+        colWidths[tableLen] = len(sortedTable[-1])  
+    print(colWidths)
+    for stringIndex in range(lengthOfLists):
+        
+        for listIndex in range(len(table)):
+            string = table[listIndex][stringIndex]
+            print(string.rjust(colWidths[listIndex]), end=' ')
+        print()
+printTable(tableData)
+
+
 

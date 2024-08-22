@@ -5,6 +5,6 @@
 # print(hello.center(20,'-'))
 # print(hello.rjust(20, '-'))
 
-import pyperclip
+# import pyperclip
 
-pyperclip.copy('www.youtube.com')
+# pyperclip.copy('www.youtube.com')
