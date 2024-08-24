@@ -34,13 +34,15 @@ tableData = [
 
 def printTable(table):
     colWidths = [0] * len(table)
+    print(colWidths)
     # print(colWidth)
     lengthOfLists = len(table[0])
     # print(lengthOfLists)
     for tableLen in range(len(table)):
         sortedTable = sorted(table[tableLen], key=len)
         colWidths[tableLen] = len(sortedTable[-1])  
-    print(colWidths)
+        print(colWidths)
+        print(tableLen)
     for stringIndex in range(lengthOfLists):
         
         for listIndex in range(len(table)):
