@@ -3,7 +3,8 @@ import sys, pyperclip
 TEXT = {
     'youtube': 'https://www.youtube.com/watch?v=t8OZPJfpcTM',
     'anime': 'www.9animetv.to',
-    'kdrama': 'https://dramacool.sh/your-honor-2018-episode-5/'
+    'kdrama': 'https://dramacool.sh/your-honor-2018-episode-5/',
+   
 }
 
 if len(sys.argv) < 2:
