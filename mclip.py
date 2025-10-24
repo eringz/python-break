@@ -4,7 +4,10 @@ TEXT = {
     'youtube': 'https://www.youtube.com/watch?v=t8OZPJfpcTM',
     'anime': 'www.9animetv.to',
     'kdrama': 'https://dramacool.sh/your-honor-2018-episode-5/',
-   
+    'secret': 'https://www.pornhub.com/view_video.php?viewkey=66b3693ad8f2a',
+    'online': 'https://onlinehelpers.info/online-installation-technician/',
+    'jealous': 'https://www.youtube.com/watch?v=5O0YDHiosD0',
+    'korean-lesson': 'https://www.youtube.com/@JOSHUACHOPH'
 }
 
 if len(sys.argv) < 2:
