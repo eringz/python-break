@@ -40,7 +40,7 @@ logging.debug('Start of the Zombie Dice program.')
 # constants, to keep a typo in a string from making weird errors
 COLOR = 0
 ICON = 1
-RED = 'red'
+RED = 'red' 
 GREEN = 'green'
 YELLOW = 'yellow'
 SHOTGUN = 'shotgun'
